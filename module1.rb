@@ -31,3 +31,14 @@ def show_board(display_board)
 #{display_board[1][0]} | #{display_board[1][1]} | #{display_board[1][2]}
 #{display_board[2][0]} | #{display_board[2][1]} | #{display_board[2][2]}"
 end
+
+def get_choice(array)
+    puts "Choose a box by entering its number."
+    choice = gets.chomp.to_i
+    until array.include?(choice)
+     puts "Please choose an availalbe number"
+     choice = gets.chomp.to_i
+    end
+    return choice
+end
+ 
