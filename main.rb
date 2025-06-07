@@ -1,5 +1,5 @@
-require_relative 'classes/player'
-require_relative 'classes/board'
+require_relative 'lib/player'
+require_relative 'lib/board'
 
 
 def play_game
