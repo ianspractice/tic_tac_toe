@@ -3,4 +3,31 @@ def delete_choice(array, element)
   array
 end
 
-p delete_choice([1, 2, 3, 4], 3)
+def replace(array, answer, letter)
+  case answer
+  when 1
+    array[0][0] = letter
+  when 2
+    array[0][1] = letter
+  when 3
+    array[0][2] = letter
+  when 4
+    array[1][0] = letter
+  when 5
+    array[1][1] = letter
+  when 6
+    array[1][2] = letter
+  when 7
+    array[2][0] = letter
+  when 8
+    array[2][1] = letter
+  when 9
+    array[2][2] = letter
+  end
+end
+
+def show_board(display_board)
+    puts "#{display_board[0][0]} | #{display_board[0][1]} | #{display_board[0][2]}
+#{display_board[1][0]} | #{display_board[1][1]} | #{display_board[1][2]}
+#{display_board[2][0]} | #{display_board[2][1]} | #{display_board[2][2]}"
+end
