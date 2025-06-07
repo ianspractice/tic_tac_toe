@@ -43,10 +43,25 @@ def get_choice(array)
 end
  
 
-def evaluate(array, sum)
-  case sum
-  when array[0].sum
-  puts "Win"
+def evaluate(array, sum_array)
+  case 
+  when sum_array.include?(array[0].sum)
   return true
+  when sum_array.include?(array[1].sum)
+  return true
+  when sum_array.include?(array[2].sum)
+  return true
+  when sum_array.include?(array[0][0] + array[1][0] + array[2][0])
+  return true
+  when sum_array.include?(array[0][1] + array[1][1] + array[2][1])
+  return true
+  when sum_array.include?(array[0][2] + array[1][2] + array[2][2])
+  return true
+  when sum_array.include?(array[0][0] + array[1][1] + array[2][2])
+  return true
+  when sum_array.include?(array[0][2] + array[1][1] + array[2][0])
+  return true
+  else
+    return false
   end
 end
