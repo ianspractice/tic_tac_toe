@@ -1,12 +1,11 @@
 class Player
-  attr_reader :letter
+  attr_reader :letter, :amount
   
   @@display_board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-  
-  
 
-  def initialize(l)
+  def initialize(l, a)
     @letter = l
+    @amount = a
   end
 
   def get_choice(array)
@@ -19,14 +18,4 @@ class Player
     return choice
   end
 
-  def show_board
-    puts "#{@@display_board[0][0]} | #{@@display_board[0][1]} | #{@@display_board[0][2]}
-#{@@display_board[1][0]} | #{@@display_board[1][1]} | #{@@display_board[1][2]}
-#{@@display_board[2][0]} | #{@@display_board[2][1]} | #{@@display_board[2][2]}"
-  end
-
-  def board 
-    puts @@display_board
-  end
 end
-
