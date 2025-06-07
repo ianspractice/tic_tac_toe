@@ -11,7 +11,7 @@ def play_game
   player2 = Player.new('O')
   show_board(display_board)
   until win == true do
-    answer1 = get_choice(choices)
+    answer1 = player1.get_choice(choices)
     replace(display_board, answer1, player1.letter)
     replace(eval_board, answer1, -1)
     delete_choice(choices, answer1)
@@ -19,10 +19,10 @@ def play_game
     eval = evaluate(eval_board, [3, -3])
     if eval == true
       win = true
-      puts "X wins!"
+      puts "#{player1.letter} wins!"
       return
     end
-    answer2 = get_choice(choices)
+    answer2 = player2.get_choice(choices)
     replace(display_board, answer2, player2.letter)
     replace(eval_board, answer2, 1)
     delete_choice(choices, answer2)
@@ -30,7 +30,7 @@ def play_game
     show_board(display_board)
     if eval == true
       win = true
-      puts "O wins!"
+      puts "#{player2.letter} wins!"
       return
     end
   end
