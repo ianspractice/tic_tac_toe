@@ -42,3 +42,11 @@ def get_choice(array)
     return choice
 end
  
+
+def evaluate(array, sum)
+  case sum
+  when array[0].sum
+  puts "Win"
+  return true
+  end
+end
